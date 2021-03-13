@@ -1,0 +1,78 @@
+body {
+  background-image: url('/assets/images/logo1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+section {
+  min-height: 150px;
+  margin: 5px;
+  padding-top: 5px;
+  padding-left: 40px;
+  /* float: left; */
+  margin-left : 100px;
+  margin-right : 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0px;
+}
+section h2 {
+  text-align: left;
+  color: rgb(83, 134, 150);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0px;
+  font-size: 50px;
+}
+/* section p {
+  text-align: left;
+  font-style: italic;
+} */
+
+/* aside {
+width: 450px;
+min-height: 200px;
+margin: 5px;
+padding: 20px;
+padding-left: 20px;
+float: left;
+margin: 50px;
+margin-top: 50px;
+margin-left: 0px;
+} */
+.video {
+  /* float: right; */
+  /* padding: 20px; */
+  padding-top: 0px;
+margin-left: 40px;
+margin-top: 0px;
+}
+
+.text-area {
+  margin-bottom: 130px;
+}
+
+/* 
+.text-area p{
+/* padding-left: 280px;
+font-weight: bold; */
+/* font-style: italic; */
+
+
+#text {
+  font-style: italic;
+  padding-left: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#text1 {
+  padding-left: 70px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0px;
+}
+#text2 {
+  padding-left: 130px;
+  font-weight: bold;
+  font-style: italic;
+}
