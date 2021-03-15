@@ -59,7 +59,7 @@ class Event
         return $list;
     }
 
-    //tra ve doi tuong product  
+    //tra ve doi tuong event  
     static function find($id)
     {
         $sql = "SELECT * FROM regist WHERE id = $id";
@@ -83,10 +83,11 @@ class Event
         return $event;
     }
 
-    public function saves() {
+    public function save()
+    {
         $sql = "INSERT INTO regist(
-            id,name,number_ticket,ticket_price,date,start_time,email,description,category_id    
-            ) VALUE (:id, :name, :number_ticket, :ticket_price,:date,:start_time,:description,:category_id)";
+            name,number_ticket,ticket_price,date,start_time,email,description,category_id    
+            ) VALUE (:name, :number_ticket, :ticket_price,:date,:start_time,:email,:description,:category_id)";
         $smpt = Dbh::getInstance()->prepare($sql);
         return $smpt->execute([
             "name" => $this->name,
@@ -94,13 +95,14 @@ class Event
             "ticket_price" => $this->ticket_price,
             "date" => $this->date,
             "start_time" => $this->start_time,
+            "email" => $this->email,
             "description" => $this->description,
             "category_id" => $this->category_id
         ]);
     }
-
+    
     //luu thuc the product vao csdl
-    public function save()
+    public function update()
     {
         $sql = "INSERT INTO regist(
                 id,name,number_ticket,ticket_price,date,start_time,email,description,category_id    

@@ -76,7 +76,7 @@ class EventController extends BaseController {
         $event->description = $description;
 
         try {
-        $storedSuccesful = $event->saves();
+        $storedSuccesful = $event->save();
         if ($storedSuccesful) {
             $_SESSION["message"] = "Bạn đã đăng kí thành công!";
         }
@@ -117,7 +117,7 @@ class EventController extends BaseController {
         $event->description = $_POST["description"];
 
         try {
-        $storedSuccesful = $event->save();
+        $storedSuccesful = $event->update();
         if ($storedSuccesful) {
             $_SESSION["message"] = "Bạn đã sửa thành công!";
         }

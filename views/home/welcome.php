@@ -4,8 +4,10 @@
     <section>
         <h2>QUÁN PHỦI</h2>
         <p id="text">16:30pm - 22:00pm</p>
-        <p id="text1">Nhà số 8 </p>
-        <p id="text2">kiệt 174 Lê Duẩn</p>
+        <div>
+            <p id="text1">Nhà số 8</p>
+            <p id="text2">kiệt 174 Lê Duẩn</p>
+        </div>
     </section>
 
 </div>

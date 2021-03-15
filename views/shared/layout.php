@@ -34,15 +34,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="?controller=event&action=index">Sự kiện</a>
                 </li>
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Khóa học
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="?controller=course&action=guitar">Guitar</a>
+                <li class="nav-item mr-auto">
+                    <a class="nav-link" href="?controller=course&action=index">Khóa học</a>
+                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="?controller=course&action=index">Guitar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="?controller=course&action=uku">Ukulele</a>
-                    </div>
+                    </div> -->
                 </li>
 
             </ul>
@@ -52,8 +50,8 @@
                     Contact
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#FB"> <i class="fab fa-facebook-f"></i> Facebook</a>
-                    <a class="dropdown-item" href="#Ig"> <i class="fab fa-instagram"></i> Instagram</a>
+                    <a class="dropdown-item" href="https://www.facebook.com/phuicaphe174"> <i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a class="dropdown-item" href="https://www.instagram.com/accounts/login/?next=/quanphui/%3Figshid%3D18m7kke07ybut"> <i class="fab fa-instagram"></i> Instagram</a>
                     <a class="dropdown-item" href="#Tw"> <i class="fab fa-twitter"></i> Twitter</a>
                 </div>
             </div>

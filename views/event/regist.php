@@ -65,20 +65,9 @@
 
 
 
-        <!-- <div class="col-md-5">
-                <div id="choose-avatar" style="height: 344px">
-                    <button type="button" onclick="input_avatar.click()" class="btn btn-sm btn-light">
-                        Choose image
-                    </button>
-                    <input id="input_avatar" type="file" name="p_file" hidden="" />
-
-                    
-                    <input type="image" hidden="" id="avatar_preview" src="" />
-
-                    
-                    <input id="avatar_url" name="image_url" type="text" hidden="" />
-                </div>
-            </div> -->
+        <div class="col-md-5">
+                <img class="img-slide" src="/assets/images/img20.jpg">
+            </div>
     </div>
 
     <div class="form-group">

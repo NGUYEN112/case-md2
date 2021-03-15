@@ -43,8 +43,8 @@ margin-left: 0px;
   /* float: right; */
   /* padding: 20px; */
   padding-top: 0px;
-margin-left: 40px;
-margin-top: 0px;
+  margin-left: 60px;
+  margin-top: 0px;
 }
 
 .text-area {
@@ -66,7 +66,7 @@ font-weight: bold; */
 }
 
 #text1 {
-  padding-left: 70px;
+  padding-left: 60px;
   font-weight: bold;
   font-style: italic;
   margin: 0px;
@@ -75,4 +75,8 @@ font-weight: bold; */
   padding-left: 130px;
   font-weight: bold;
   font-style: italic;
+}
+
+section div {
+  margin-top: 50px;
 }
