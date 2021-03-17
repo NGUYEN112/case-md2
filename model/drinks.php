@@ -44,4 +44,30 @@
 
         return $drinks;
     }
+    public function updateDrink()
+    {
+        $sql = "INSERT INTO drinks(
+                id,name,image_url,price   
+                )   
+                VALUE(?,?,?,?)
+                ON DUPLICATE KEY UPDATE
+                name=?,
+                image_url=?,
+                price=?
+            ";
+
+        $smpt = Dbh::getInstance()->prepare($sql);
+        return $smpt->execute(
+            [
+                $this->id,
+                $this->name,
+                $this->image_url,
+                $this->price,
+
+                $this->name,
+                $this->image_url,
+                $this->price
+            ]
+        );
+    }
     }

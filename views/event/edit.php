@@ -9,7 +9,7 @@
         $_SESSION["failmessage"] = NULL;
     }
     ?>
-    
+
     <div class="row">
         <div id="right_form_col" class="col-md-4">
             <div class="form-group">
@@ -90,4 +90,3 @@
         </button>
     </div>
 </form>
-</div>

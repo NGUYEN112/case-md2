@@ -12,6 +12,7 @@ class Event
     public $email;
     public $category_id;
     public $description;
+    public $status;
 
     public $category;
 
@@ -48,6 +49,9 @@ class Event
             $entity->email = $row["email"];
             $entity->description = $row["description"];
             $entity->category_id = $row["category_id"];
+            $entity->status = $row["status"];
+
+
 
             $entity->category = $row["category"];
 
@@ -79,6 +83,8 @@ class Event
         $event->email = $rawData["email"];
         $event->description = $rawData["description"];
         $event->category_id = $rawData["category_id"];
+        $event->status = $rawData["status"];
+
 
         return $event;
     }
@@ -86,8 +92,8 @@ class Event
     public function save()
     {
         $sql = "INSERT INTO regist(
-            name,number_ticket,ticket_price,date,start_time,email,description,category_id    
-            ) VALUE (:name, :number_ticket, :ticket_price,:date,:start_time,:email,:description,:category_id)";
+            name,number_ticket,ticket_price,date,start_time,email,description,category_id,status 
+            ) VALUE (:name, :number_ticket, :ticket_price,:date,:start_time,:email,:description,:category_id,:status)";
         $smpt = Dbh::getInstance()->prepare($sql);
         return $smpt->execute([
             "name" => $this->name,
@@ -97,7 +103,9 @@ class Event
             "start_time" => $this->start_time,
             "email" => $this->email,
             "description" => $this->description,
-            "category_id" => $this->category_id
+            "category_id" => $this->category_id,
+            "status" => $this->status,
+
         ]);
     }
     
@@ -148,5 +156,52 @@ class Event
         $db = Dbh::getInstance();
         $req = $db->prepare("DELETE FROM regist WHERE id = $this->id");
         $req->execute();
+    }
+
+    public function updateStatus()
+    {
+        $sql = "INSERT INTO regist(
+                id,name,number_ticket,ticket_price,date,start_time,email,description,category_id,status 
+                )   
+                VALUE(?,?,?,?,?,?,?,?,?,?)
+                ON DUPLICATE KEY UPDATE
+                name=?,
+                number_ticket=?,
+                ticket_price=?,
+                date=?,
+                start_time=?,
+                email=?,
+                description=?,
+                category_id=?,
+                status=?
+            ";
+
+        $smpt = Dbh::getInstance()->prepare($sql);
+        return $smpt->execute(
+            [
+                $this->id,
+                $this->name,
+                $this->number_ticket,
+                $this->ticket_price,
+                $this->date,
+                $this->start_time,
+                $this->email,
+                $this->description,
+                $this->category_id,
+                $this->status,
+
+
+                $this->name,
+                $this->number_ticket,
+                $this->ticket_price,
+                $this->date,
+                $this->start_time,
+                $this->email,
+                $this->description,
+                $this->category_id,
+                $this->status
+
+            ]
+        );
     }
 }

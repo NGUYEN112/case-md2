@@ -21,7 +21,7 @@
         foreach($rawData as $row) {
             $entity =  new Course();
             $entity->id = $row["id"];
-            $entity->fulll_name = $row["full_name"];
+            $entity->full_name = $row["full_name"];
             $entity->phone = $row["phone"];
             $entity->email = $row["email"];
             $entity->date_regist = $row["date_regist"];

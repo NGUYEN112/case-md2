@@ -63,6 +63,7 @@ class EventController extends BaseController {
         $email = $_POST["email"];
         $category_id = $_POST["category_id"];
         $description = $_POST["description"];
+        $status = $_POST["status"];;
 
         //khoi tao doi tuong product
         $event = new Event();
@@ -74,6 +75,7 @@ class EventController extends BaseController {
         $event->email = $email;
         $event->category_id = $category_id;
         $event->description = $description;
+        $event->status = $status;
 
         try {
         $storedSuccesful = $event->save();

@@ -72,7 +72,7 @@
 
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Mô tả</label>
-
+        <input type="text" hidden value="Chờ xác nhận" name="status">
         <textarea class="form-control" placeholder="Gửi đôi lời tới chúng tớ nào!" name="description" id="exampleFormControlTextarea1" rows="2"></textarea>
     </div>
 

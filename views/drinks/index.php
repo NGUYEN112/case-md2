@@ -20,7 +20,7 @@
 
         <div class="menu_item item-left">
             <div class="menu_item_image">
-                <a title="BẠC SỈU"><img src="/assets/images/cacao-nong-1_grande.jpg"></a>
+                <a title="BẠC SỈU"><img src="/assets/images/cacao.jpg"></a>
             </div>
             <div class="menu_item_info bg_white">
                 <h3><a title="BẠC SỈU">CaCao</a></h3>

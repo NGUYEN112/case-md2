@@ -6,65 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quán Phủi</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
-    <link rel="icon" type="image/jpg" href="/assets/images/logo-phui_nonebg_x1.jpg">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="?controller=home&action=welcome"><img class="logo" src="/assets/images/logo-phui_nonebg_x1.jpg"></a>
+        <a class="navbar-brand" href="#"><img class="logo" src="/images/logo-phui_nonebg_x1.jpg"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <?php
-            require_once("model/user.php");
-        ?>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto   ml-auto">
+            <ul class="navbar-nav mr-auto ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="?controller=home&action=welcome">Phủi</a>
+                    <a class="nav-link" href="#">Phủi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="?controller=drinks&action=index">Đồ uống</a>
+                    <a class="nav-link" href="#">Đồ uống</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="?controller=event&action=index">Sự kiện</a>
+                <a class="nav-link" href="#">Sự kiện</a>
                 </li>
-                <li class="nav-item mr-auto">
-                    <a class="nav-link" href="?controller=course&action=index">Khóa học</a>
-                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="?controller=course&action=index">Guitar</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Khóa học
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Guitar</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="?controller=course&action=uku">Ukulele</a>
-                    </div> -->
+                        <a class="dropdown-item" href="#">Ukulele</a>
+                    </div>
                 </li>
-
             </ul>
-            <div class="nav-item dropdown contact navbar-nav">
+            <a href="#login"> <i class="fas fa-user"></i> Đăng nhập</a>
+            <div class="nav-item dropdown contact">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-users"></i>
                     Contact
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://www.facebook.com/phuicaphe174"> <i class="fab fa-facebook-f"></i> Facebook</a>
-                    <a class="dropdown-item" href="https://www.instagram.com/accounts/login/?next=/quanphui/%3Figshid%3D18m7kke07ybut"> <i class="fab fa-instagram"></i> Instagram</a>
+                    <a class="dropdown-item" href="#FB"> <i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a class="dropdown-item" href="#Ig"> <i class="fab fa-instagram"></i> Instagram</a>
                     <a class="dropdown-item" href="#Tw"> <i class="fab fa-twitter"></i> Twitter</a>
                 </div>
             </div>
-            <form action="?controller=auth&action=logOut" method="POST">
-                    <a class="nav-link" onclick="confirm('Bạn muốn đăng xuất?') && this.parentNode.submit();" href="javascript:;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-            </form>
         </div>
     </nav>
-
-    <div>
-        <?php echo $content; ?>
-    </div>
 </body>
+
+</html>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -73,5 +64,3 @@
 
 <!-- link icon awesome -->
 <script src="https://kit.fontawesome.com/fd80de56a4.js" crossorigin="anonymous"></script>
-</html>
-

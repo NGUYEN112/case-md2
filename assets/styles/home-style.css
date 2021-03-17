@@ -17,8 +17,8 @@ section {
   margin-bottom: 0px;
 }
 section h2 {
-  text-align: left;
-  color: rgb(83, 134, 150);
+  text-align: center;
+  color: rgb(183, 234, 250);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 0px;
   font-size: 50px;
@@ -43,8 +43,9 @@ margin-left: 0px;
   /* float: right; */
   /* padding: 20px; */
   padding-top: 0px;
-  margin-left: 60px;
+  margin: 60px;
   margin-top: 0px;
+  padding-left: 220px;
 }
 
 .text-area {
@@ -66,15 +67,11 @@ font-weight: bold; */
 }
 
 #text1 {
-  padding-left: 60px;
+  text-align: right;
+    /* padding-left: 660px; */
   font-weight: bold;
   font-style: italic;
   margin: 0px;
-}
-#text2 {
-  padding-left: 130px;
-  font-weight: bold;
-  font-style: italic;
 }
 
 section div {
