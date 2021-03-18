@@ -1,14 +1,14 @@
 <?php
-    if (isset($_SESSION["failmessage"])) {
-        echo '<div class="alert alert-danger" role="alert">
+if (isset($_SESSION["failmessage"])) {
+    echo '<div class="alert alert-danger" role="alert">
                     ' . $_SESSION["failmessage"] . '
               </div>';
-        $_SESSION["failmessage"] = NULL;
-    }
-    ?>
+    $_SESSION["failmessage"] = NULL;
+}
+?>
 
 <form method="POST">
-    <div class="row">
+    <div class="row align-input">
         <div id="right_form_col" class="col-md-4">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Tên đồ uống</label>
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group sumid-button">
         <button type="submit" class="btn btn-primary btn-lg btn-block">
             Chỉnh sửa xong!
         </button>

@@ -10,6 +10,10 @@
     }
     ?>
 
+    <div class="head-link">
+        <a class="fab-button-mid-bot btn btn-primary btn-lg" type="button" href="?controller=event&action=eventlist">Sự kiện chờ</a>
+    </div>
+
     <div class="row">
         <div id="right_form_col" class="col-md-4">
             <div class="form-group">
@@ -58,6 +62,11 @@
                 <label for="exampleFormControlInput1">Email</label>
                 <input type="text" class="form-control" name="email" id="exampleFormControlInput1" placeholder="Email" value="<?php echo $regist->email ?>" />
             </div>
+
+
+        </div>
+        <div class="col-md-5">
+            <img class="img-slide" src="/assets/images/img3.jpg">
         </div>
 
 

@@ -1,8 +1,18 @@
 <h2>Danh sách người dùng</h2>
-<table class="table">
+<?php
+    if (isset($_SESSION["message"])) {
+        echo "
+    <div class='alert alert-succses' role='alert'>
+      " . $_SESSION["message"] . "  
+    </div>
+    ";
+
+        unset($_SESSION["message"]);
+    }
+    ?>
+<table class="table table-bordered">
   <thead class="thead">
     <tr>
-      <th scope="col">Stt</th>
       <th scope="col">Tên</th>
       <th scope="col">Email</th>
       <th scope="col">Password</th>
@@ -13,7 +23,6 @@
   <?php
   function makeProductRow($users,$stt = null) {
     return '<tr class="">
-    <th class="align-middle" scope="row">'.$stt.'</th>
     <td class="align-middle">'.$users->full_name.'</td>
     <td class="align-middle">'.$users->email.'</td>
     <td class="align-middle">'.$users->password.'</td>

@@ -18,7 +18,7 @@
   <!-- <link rel="stylesheet" href="/assets/styles//bootstrap.min.css" />
   <link rel="stylesheet" href="/assets/styles/font.css" /> -->
   <link rel="stylesheet" href="/assets/styles/auth-styles.css" />
-  <title>Login</title>
+  <title>Regist</title>
 </head>
 
 <body>

@@ -37,7 +37,8 @@ class CourseController extends BaseController
         try {
             $storedSuccesful = $course->saveRegistCourse();
             if ($storedSuccesful) {
-                $_SESSION["message"] = "Bạn đã đăng kí khóa thành công!";
+                $_SESSION["message"] = "Bạn đã đăng kí khóa học thành công!";
+                header("Location:?controller=course&action=index");
             }
             $this->showRegistCoursePage();
         } catch (Exception $e) {

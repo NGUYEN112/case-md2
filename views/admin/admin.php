@@ -1,10 +1,11 @@
-<table class="table">
+
+<table class="table table-bordered">
   <thead class="thead">
     <tr>
       <th scope="col">Tên</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
-      <th scope="col" class="text-center"></th>
+      <th scope="col text-center">Password</th>
+      <!-- <th scope="col" class="text-center"></th> -->
     </tr>
   </thead>
   <tbody>
@@ -13,7 +14,7 @@
     return '<tr class="">
     <td class="align-middle">'.$users->full_name.'</td>
     <td class="align-middle">'.$users->email.'</td>
- 
+    <td class="align-middle"></td>
   </tr>
     ';
   }

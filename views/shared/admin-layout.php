@@ -24,8 +24,13 @@
                     Dashboard
                 </a>
             </div>
-            <div class="sidebar-wrapper sidebar-content">
+            <div class="sidebar-wrapper">
                 <ul class="nav">
+                    <li class="nav-item active item-content">
+                        <a class="nav-link" href="?controller=admin&action=dashboard">
+                            <i class="fas fa-home"></i> Trang chủ
+                        </a>
+                    </li>
                     <li class="nav-item active item-content">
                         <a class="nav-link" href="?controller=admin&action=drinks">
                             <i class="fas fa-coffee"></i> Đồ uống
@@ -53,7 +58,7 @@
             </div>
         </div>
         <div class="main-panel">
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top nav-styles ">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                     </div>
@@ -75,10 +80,10 @@
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-user-cog"></i>
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="?controller=admin&action=admin"><i class="fas fa-user"></i></a>
+                                    <div class="dropdown-menu custom-dropdown custom-size" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="?controller=admin&action=admin" style="padding-left: 14px;"><i class="fas fa-user"> TÀI KHOẢN</i></a>
                                         <form action="?controller=auth&action=logOut" method="POST">
-                                            <a class="dropdown-item nav-link" onclick="confirm('Bạn muốn đăng xuất?') && this.parentNode.submit();" href="javascript:;"><i class="fas fa-sign-out-alt"></i></a>
+                                            <a class="dropdown-item nav-link" onclick="confirm('Bạn muốn đăng xuất?') && this.parentNode.submit();" href="javascript:;"><i class="fas fa-sign-out-alt"> đăng xuất</i></a>
                                         </form>
                                     </div>
                                 </div>
@@ -87,8 +92,7 @@
                     </div>
                 </div>
             </nav>
-            <!-- End Navbar -->
-            <div class="content">
+            <div class="content dashboard">
                 <div class="container-fluid">
                     <?php echo $content ?>
                 </div>

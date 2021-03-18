@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/assets/styles/course-style.css">
 
 
+
 <body>
 
     <div class="container-info">

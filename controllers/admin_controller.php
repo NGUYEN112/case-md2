@@ -133,11 +133,11 @@ class AdminController extends BaseController
         try {
         $storedSuccesful = $event->updateStatus();
         if ($storedSuccesful) {
-            $_SESSION["message"] = "Bạn đã sửa thành công!";
+            $_SESSION["message"] = "Duyệt sự kiện thành công!";
         }
             header("Location:?controller=admin&action=event");
         }catch(Exception $e) {
-            $_SESSION["failmessage"] = "Xin lỗi tụi mình chỉ tổ chức được mỗi ngày một event, bạn vui lòng chọn ngày khác!";
+            $_SESSION["failmessage"] = "Xảy ra lỗi, thử lại !";
             $this->showDetailPage();
         }
 
@@ -180,6 +180,7 @@ class AdminController extends BaseController
         $user->full_name = $_POST["full_name"];
         $user->email = $_POST["email"];
         $user->password = $_POST["password"];
+        $user->rate = $_POST["rate"];
         try {
         $storedSuccesful = $user->updateUser();
         if ($storedSuccesful) {

@@ -1,39 +1,42 @@
 <?php
 
-    class User {
+class User
+{
     public $id;
     public $full_name;
     public $email;
     public $password;
     public $rate;
 
-        static function findUser($email,$password) {
-            $query = "SELECT * FROM users WHERE email = ? AND password = ?";
+    static function findUser($email, $password)
+    {
+        $query = "SELECT * FROM users WHERE email = ? AND password = ?";
 
-            $smpt = Dbh::getInstance()->prepare($query);
-            $smpt->execute([$email,$password]);
+        $smpt = Dbh::getInstance()->prepare($query);
+        $smpt->execute([$email, $password]);
 
-            //mang liên kết
-            $rawdata = $smpt->fetch();
-            //kiem tra kieu dữ liệu của rawdata
-            if(!$rawdata) {
-                return null;
-            }
-
-            $user = New User();
-            $user->id = $rawdata["id"];
-            $user->full_name = $rawdata["full_name"];
-            $user->email = $rawdata["email"];
-            $user->password = $rawdata["password"];
-            $user->rate = $rawdata["rate"];
-
-            return $user;
+        //mang liên kết
+        $rawdata = $smpt->fetch();
+        //kiem tra kieu dữ liệu của rawdata
+        if (!$rawdata) {
+            return null;
         }
 
-        static function all(){
-            $sql = "SELECT * FROM users";
+        $user = new User();
+        $user->id = $rawdata["id"];
+        $user->full_name = $rawdata["full_name"];
+        $user->email = $rawdata["email"];
+        $user->password = $rawdata["password"];
+        $user->rate = $rawdata["rate"];
 
-            
+        return $user;
+    }
+
+    static function all()
+    {
+        $sql = "SELECT * FROM users";
+
+
         $smpt = Dbh::getInstance()->prepare($sql);
         $smpt->execute();
 
@@ -41,7 +44,7 @@
 
         $list = [];
 
-        foreach($rawData as $row) {
+        foreach ($rawData as $row) {
             $entity =  new User();
             $entity->id = $row["id"];
             $entity->full_name = $row["full_name"];
@@ -53,8 +56,8 @@
             $list[] = $entity;
         }
         return $list;
-        }
-        
+    }
+
 
     //     static function storeAuthUser($user) {
     //         $_SESSION[AUTH_KEY] = serialize($user);
@@ -78,39 +81,43 @@
         $user->full_name = $rawData["full_name"];
         $user->email = $rawData["email"];
         $user->password = $rawData["password"];
+        $user->rate = $rawData["rate"];
 
         return $user;
     }
 
-    public function updateUser() {
+    public function updateUser()
+    {
         $sql = "INSERT INTO users(
-                id,full_name,email,password   
-                )   
-                VALUE(?,?,?,?)
-                ON DUPLICATE KEY UPDATE
-                full_name=?,
-                email=?,
-                password=?
+            id,full_name,email,password,rate   
+            )   
+            VALUE(?,?,?,?,?)
+            ON DUPLICATE KEY UPDATE
+            full_name=?,
+            email=?,
+            password=?,
+            rate=?
+        ";
 
-            ";
+    $smpt = Dbh::getInstance()->prepare($sql);
+    return $smpt->execute(
+        [
+            $this->id,
+            $this->full_name,
+            $this->email,
+            $this->password,
+            $this->rate,
 
-        $smpt = Dbh::getInstance()->prepare($sql);
-        return $smpt->execute(
-            [
-                $this->id,
-                $this->full_name,
-                $this->email,
-                $this->password,
- 
-
-                $this->full_name,
-                $this->email,
-                $this->password
-            ]
-        );
+            $this->full_name,
+            $this->email,
+            $this->password,
+            $this->rate
+        ]
+    );
     }
 
-    public function saveUser() {
+    public function saveUser()
+    {
         $sql = "INSERT INTO users(
             full_name,email,password,rate 
             ) VALUE (:full_name, :email, :password,:rate)";

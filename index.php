@@ -14,7 +14,7 @@ if(!isset($_SESSION["auth"]) && $controller != "auth"){
 
 if(isset($_SESSION["auth"])){
 if(($_SESSION["admin"] !=true) && $controller == "admin") {
-    header('Location:?controller=home&action=welcome');
+    header('Location:?controller=error&action=page');
 }
 }
 //ham kiem tra duong dan

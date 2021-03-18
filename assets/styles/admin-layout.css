@@ -28,3 +28,26 @@ h2 {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.custom-dropdown {
+    left: -95px !important;
+}
+
+.custom-size {
+    width: 10px !important;
+}
+
+.align-input {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sumid-button {
+    width: 350px;
+    margin-left: 340px;
+}
+
+.nav-styles {
+    background-color: #f5f5f5 !important;
+}

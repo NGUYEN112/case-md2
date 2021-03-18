@@ -9,7 +9,7 @@
     }
     ?>
 
-    <div class="row">
+    <div class="row align-input">
         <div id="right_form_col" class="col-md-4">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Tên</label>
@@ -25,13 +25,14 @@
             <div class="form-group">
                 <label for="exampleFormControlInput1">Mật khẩu</label>
                 <input type="number" class="form-control" name="password" id="exampleFormControlInput1" placeholder="" value="<?php echo $users->password ?>" />
+                <input type="number" name="rate" value="<?php echo $users->rate ?>" hidden>
             </div>
         </div>
 
     </div>
 
 
-    <div class="form-group">
+    <div class="form-group sumid-button">
         <button type="submit" class="btn btn-primary btn-lg btn-block">
             Chỉnh sửa tài khoản!
         </button>

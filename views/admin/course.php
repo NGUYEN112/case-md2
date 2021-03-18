@@ -1,5 +1,5 @@
 <h2>Danh sách đăng ký khóa học</h2>
-<table class="table">
+<table class="table table-bordered">
   <thead class="thead">
     <tr>
       <th scope="col">Stt</th>
